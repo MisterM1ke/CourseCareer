@@ -1,14 +1,11 @@
 body{
     display:flex;
-    /* flex-direction:column; */
     justify-content:center;
-    /* min-height:100vh; */
     background-color: #ef767a;
 }
 #container {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     background-color:#456990;
     border-radius:10px;
@@ -25,9 +22,7 @@ body{
     color: #030e12;
     font-size: xxx-large;
     font-weight: bolder;
-    /* margin: 10px; */
     border-radius: 10px 10px 50% 50%;
-    /* padding: 55px 0px; */
     width: 100%;
     max-height: 180px;
 }
@@ -42,8 +37,6 @@ body{
     flex: 1;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
-    /* margin: 10px; */
     padding: 20px 0px;
     width: 85%;
     max-height: 50px;
@@ -51,13 +44,12 @@ body{
 #task {
     display: flex;
     flex: 1;
-    /* justify-content: center; */
     background-color: #030e12;
     color: #ffffff;
     border-radius: 25px;
     border-style: hidden;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     height: 50px;
     position: relative;
     margin-right: -40px;
@@ -67,8 +59,6 @@ label {
     color: white;
     margin-right: 5px;
     font-size: x-large;
-    /* justify-content: center; */
-
 }
 
 #addTaskButton {
@@ -87,12 +77,12 @@ label {
     flex-direction: column;
     flex: 1;
     background-color: #030e12;
-    /* opacity: .50; */
     border-radius: 5px;
     margin-bottom: 20px;
     width: 90%;
     align-content: flex-start;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 ul {
@@ -102,10 +92,8 @@ ul {
 .row {
     display: flex;
     flex-direction: row;
-    /* flex:1; */
     background-color: #030e12;
     border: #456990 solid 1px;
-    /* border-left: #e2f0f9 solid 15px; */
     border-radius: 5px;
     margin: 5px;
     height: 60px;
@@ -122,8 +110,6 @@ ul {
     margin-right: 10px;
 }
 .row button {
-    /* display: flex; */
-    /* flex: 1; */
     border: hidden;
     align-items: center;
     font-size: large;

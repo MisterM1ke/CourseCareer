@@ -1,24 +1,25 @@
 const taskList = [];
+let inputTask = document.getElementById("task");
 
-function addTask(){
-    let inputTask = document.getElementById("task");
-    if(inputTask.value.length == 0) return;
+function addTask(){    
+    if(inputTask.value.length == 0) return; // prevents adding empty tasks
     taskList.push(inputTask.value);
     makeHtmlTaskList(inputTask.value,taskList.length);
-    inputTask.value = "";
+    inputTask.value = ""; // clears input box
+    inputTask.focus(); // focus inputbox
 }
 
 function removeTask(e){
     e.parentElement.remove();
-    taskList.splice(e.value,1);
+    taskList.splice(e.value,1); // removes item from array
 }
 
-function makeHtmlTaskList(task,index){
+function makeHtmlTaskList(task,index){ //creates dom li element with children
     const ul = document.getElementById("resultList");
     const li = document.createElement("li");
-    const checkbox = document.createElement("input");
-    const span = document.createElement("span");
-    const btn = document.createElement("button");
+    const checkbox = document.createElement("input"); //creates a checkbox input element that strikesthrough completed tasks
+    const span = document.createElement("span"); // span constains task text
+    const btn = document.createElement("button"); // button to delete task
 
     li.className = "row";
 
@@ -38,3 +39,12 @@ function makeHtmlTaskList(task,index){
     li.appendChild(btn);
     ul.appendChild(li);
 }
+
+// add event handlers
+
+
+inputTask.addEventListener("keyup", function(e) {
+    if (e.key === "Enter"){
+        addTask();
+    }
+})
