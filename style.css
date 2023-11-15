@@ -13,6 +13,7 @@ body{
     min-width: 500px;
     max-width: 650px;
     height: 850px;
+    box-shadow: 5px 5px;;
 }
 #title{
     display: flex;
